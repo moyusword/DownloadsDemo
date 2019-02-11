@@ -1,0 +1,20 @@
+PODS:
+  - Ono (2.1.1)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Ono
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Ono
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Ono: 13c25831a4a66b30df93bd1fa57cf70f13c62699
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 8277b8f8fe7aea1143d33a0dd866c4b99047dd54
+
+COCOAPODS: 1.5.3

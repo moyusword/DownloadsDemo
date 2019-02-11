@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GMX-hw-0Tr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wfJ-ut-UGl">
+            <objects>
+                <navigationController id="GMX-hw-0Tr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d0H-Sv-coc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RM6-ch-b1q" kind="relationship" relationship="rootViewController" id="NWt-ut-9Zp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVs-Kf-CLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1551" y="-54"/>
+        </scene>
+        <!--Home Web Controller-->
+        <scene sceneID="QAx-f9-B8X">
+            <objects>
+                <viewController id="RM6-ch-b1q" customClass="HomeWebController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4z-AB-KsI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-nQ-9ML">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rCj-nQ-9ML" secondAttribute="trailing" id="414-py-WNJ"/>
+                            <constraint firstItem="rCj-nQ-9ML" firstAttribute="leading" secondItem="h4z-AB-KsI" secondAttribute="leading" id="MXz-TX-AwO"/>
+                            <constraint firstAttribute="bottom" secondItem="rCj-nQ-9ML" secondAttribute="bottom" id="pq0-Wh-mdY"/>
+                            <constraint firstItem="rCj-nQ-9ML" firstAttribute="top" secondItem="h4z-AB-KsI" secondAttribute="top" id="ujg-V9-p4f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="axU-ca-cMK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J26-r0-eIe"/>
+                    <connections>
+                        <outlet property="webView" destination="rCj-nQ-9ML" id="WHs-bP-a1d"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startRead" id="BI4-6g-7rB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLA-9e-yqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751.20000000000005" y="-54.422788605697157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Content" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请重新刷新" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-Pe-OWW">
+                                <rect key="frame" x="35" y="90" width="305" height="22.5"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BRt-oP-POV">
+                                <rect key="frame" x="20" y="127.5" width="335" height="519.5"/>
+                                <color key="backgroundColor" red="0.90272923437367469" green="1" blue="0.9560594570402553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svx-Cw-O49">
+                                <rect key="frame" x="20" y="40" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7B9-Pr-exp"/>
+                                    <constraint firstAttribute="width" constant="70" id="ryp-zK-rFb"/>
+                                </constraints>
+                                <state key="normal" title="上一章"/>
+                                <connections>
+                                    <action selector="preClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ree-R9-pHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-9F-PTd">
+                                <rect key="frame" x="285" y="40" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GMY-Ld-wCD"/>
+                                    <constraint firstAttribute="width" constant="70" id="Ts3-XX-aSG"/>
+                                </constraints>
+                                <state key="normal" title="下一章"/>
+                                <connections>
+                                    <action selector="nextClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHF-eM-bcj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BRt-oP-POV" secondAttribute="bottom" constant="20" id="6pp-7T-f3v"/>
+                            <constraint firstItem="BRt-oP-POV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NVD-8O-sLb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BRt-oP-POV" secondAttribute="trailing" constant="20" id="TkM-H3-WWP"/>
+                            <constraint firstItem="svx-Cw-O49" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bgH-e7-Xbx"/>
+                            <constraint firstItem="GV6-Pe-OWW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="35" id="jZc-Cg-ZqB"/>
+                            <constraint firstItem="GV6-Pe-OWW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uat-8c-ohu"/>
+                            <constraint firstItem="XfY-9F-PTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wHf-ib-B4z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XfY-9F-PTd" secondAttribute="trailing" constant="20" id="wIL-L5-Dp0"/>
+                            <constraint firstItem="BRt-oP-POV" firstAttribute="top" secondItem="GV6-Pe-OWW" secondAttribute="bottom" constant="15" id="x0J-Uz-6D4"/>
+                            <constraint firstAttribute="trailing" secondItem="GV6-Pe-OWW" secondAttribute="trailing" constant="35" id="xE1-3M-ycH"/>
+                            <constraint firstItem="svx-Cw-O49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xEL-hg-1hF"/>
+                            <constraint firstItem="GV6-Pe-OWW" firstAttribute="top" secondItem="svx-Cw-O49" secondAttribute="bottom" constant="20" id="z9C-vF-5SW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nG5-dN-6UP"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="textView" destination="BRt-oP-POV" id="b2P-jI-L9G"/>
+                        <outlet property="titleLbl" destination="GV6-Pe-OWW" id="rpA-iM-pEZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-54"/>
+        </scene>
+    </scenes>
+</document>
